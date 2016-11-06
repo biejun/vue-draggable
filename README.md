@@ -63,7 +63,7 @@ new Vue({
 	<li v-for="row in demo1" v-text="row.title"></li>
 </ul>
 ```
-当demo1中的数据被放置到demo2时，会在目标实例上触发一个新增事件
+当demo1中的数据被放置到demo2时，会在目标实例上触发一个放置事件
 ```javascript
 new Vue({
 	el : '#app',
