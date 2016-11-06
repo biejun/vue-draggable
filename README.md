@@ -32,7 +32,27 @@ new Vue({
 	<li v-for="row in demo1" v-text="row.title"></li>
 </ul>
 ```
-    demo1中的数据被复制到了demo2中
+当demo1中的数据被复制到demo2时，会在目标实例上触发一个新增事件
+```javascript
+new Vue({
+	el : '#app',
+	data : {
+		demo1 :[
+			{title:'demo1 title'},
+			{title:'demo1 title 1'}
+		],
+		demo2 : [
+			{title:'demo2 title'},
+			{title:'demo2 title 2'}
+		]
+	},
+	evevnt:{
+		dragadd:function(event,dragEl,oldIndex,newIndex){
+
+		}
+	}
+})
+```
 #### put 类型
 当前对象只允许添加数据，不允许移出数据，如下：
 ```html
@@ -42,4 +62,25 @@ new Vue({
 <ul v-draggable:put="demo2" :name="demo2">
 	<li v-for="row in demo1" v-text="row.title"></li>
 </ul>
+```
+当demo1中的数据被放置到demo2时，会在目标实例上触发一个新增事件
+```javascript
+new Vue({
+	el : '#app',
+	data : {
+		demo1 :[
+			{title:'demo1 title'},
+			{title:'demo1 title 1'}
+		],
+		demo2 : [
+			{title:'demo2 title'},
+			{title:'demo2 title 2'}
+		]
+	},
+	evevnt:{
+		dragput:function(event,data,target){
+
+		}
+	}
+})
 ```
