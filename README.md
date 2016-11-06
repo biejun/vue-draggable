@@ -1,7 +1,7 @@
 # vue-draggable
 基于Vue V1.0.2的拖拽放置插件
 ### 使用方法
-引入插件 vue-draggable.js，只需在需要拖拽的元素上添加 v-draggable指令，并传入拖拽的数据对象即可，另外它还提供两种类型为 copy 或 put的拖拽形式。
+引入插件 vue-draggable.js，只需在需要拖拽的元素上添加 v-draggable指令，并传入拖拽的数据对象即可，另外它还提供两种类型为 copy 或 put的拖拽方式。
 ```javascript
 new Vue({
 	el : '#app',
@@ -17,6 +17,7 @@ new Vue({
 	}
 })
 ```
+默认使用如下：
 ```html
 <ul v-draggable="demo1">
 	<li v-for="row in demo1" v-text="row.title"></li>
