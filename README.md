@@ -57,11 +57,11 @@ new Vue({
 #### put 类型
 当前对象只允许添加数据，不允许移出数据，如下：
 ```html
-<ul v-draggable="demo1" :name="demo1" :to="demo2">
-	<li v-for="row in demo1" v-text="row.title"></li>
+<ul>
+	<li v-for="row in demo1" v-text="row.title" v-draggable="demo1" :name="demo1" :to="demo2"></li>
 </ul>
-<ul v-draggable:put="demo2" :name="demo2">
-	<li v-for="row in demo1" v-text="row.title"></li>
+<ul>
+	<li v-for="row in demo1" v-text="row.title" v-draggable:put="demo2" :name="demo2"></li>
 </ul>
 ```
 当demo1中的数据被放置到demo2时，会在目标实例上触发一个放置事件
