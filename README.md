@@ -19,18 +19,18 @@ new Vue({
 ```
 默认使用如下：
 ```html
-<ul v-draggable="demo1">
-	<li v-for="row in demo1" v-text="row.title"></li>
+<ul>
+	<li v-for="row in demo1" v-text="row.title" v-draggable="demo1"></li>
 </ul>
 ```
 #### copy 类型
 克隆当前对象中被选中数据到一个新的对象中，通过设置参数 :name 和 :to 将被拖拽数据复制到to所设置的新对象中，如下：
 ```html
-<ul v-draggable:copy="demo1" :name="demo1" :to="demo2">
-	<li v-for="row in demo1" v-text="row.title"></li>
+<ul>
+	<li v-for="row in demo1" v-text="row.title" v-draggable:copy="demo1" :name="demo1" :to="demo2"></li>
 </ul>
-<ul v-draggable="demo2" :name="demo2">
-	<li v-for="row in demo1" v-text="row.title"></li>
+<ul>
+	<li v-for="row in demo1" v-text="row.title" v-draggable="demo2" :name="demo2"></li>
 </ul>
 ```
 当demo1中的数据被复制到demo2时，会在目标实例上触发一个新增事件
